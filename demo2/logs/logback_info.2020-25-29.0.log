@@ -1,0 +1,17 @@
+16:25:23 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Starting MemoryApplication on PC-20181213RMDW with PID 12600 (G:\practice\JAVADocument\memory\target\classes started by Administrator in G:\practice\JAVADocument\memory)
+16:25:23 logback [main] INFO  com.pubinfo.memory.MemoryApplication- No active profile set, falling back to default profiles: default
+16:25:25 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+16:25:25 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 127ms. Found 2 MongoDB repository interfaces.
+16:25:27 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+16:25:27 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Initializing ProtocolHandler ["http-nio-8080"]
+16:25:27 logback [main] INFO  o.a.catalina.core.StandardService- Starting service [Tomcat]
+16:25:27 logback [main] INFO  o.a.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.33]
+16:25:27 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+16:25:27 logback [main] INFO  o.s.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3791 ms
+16:25:29 logback [main] INFO  org.mongodb.driver.cluster- Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+16:25:30 logback [cluster-ClusterId{value='5ea939f9b3711e1ffef65acc', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:1, serverValue:230}] to 127.0.0.1:27017
+16:25:30 logback [cluster-ClusterId{value='5ea939f9b3711e1ffef65acc', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster- Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18621271}
+16:25:33 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+16:25:33 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Starting ProtocolHandler ["http-nio-8080"]
+16:25:33 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+16:25:33 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Started MemoryApplication in 12.744 seconds (JVM running for 18.467)

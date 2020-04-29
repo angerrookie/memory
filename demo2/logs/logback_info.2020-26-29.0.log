@@ -1,0 +1,6 @@
+16:26:36 logback [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:26:36 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+16:26:36 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet- Completed initialization in 29 ms
+16:26:36 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>上传文件:
+16:26:36 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>执行方法开始，文件数量：1
+16:26:38 logback [http-nio-8080-exec-2] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:2, serverValue:233}] to 127.0.0.1:27017

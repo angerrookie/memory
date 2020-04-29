@@ -3,24 +3,14 @@ package com.pubinfo.memory.utils;
 public class FileUtils {
 
 
-    public static boolean compare(long size,double limitSize,Type type){
+    public static boolean compare(long size, double limitSize, Type type) {
 
         double v = type.getCode() * limitSize;
         long l = new Double(Math.ceil(v)).longValue();
-        System.out.println("---->限制大小："+l+""+type.getType());
-        return size>l;
+        System.out.println("---->限制大小：" + l + "" + type.getType());
+        return size < l;
     }
-}
 
-
-/*
-    */
-/**
-     * 获取文件大小
-     *
-     * @param size
-     * @return
-     *//*
 
     public static String getPrintSize(long size) {
         // 如果字节数少于1024，则直接以B为单位，否则先除于1024，后3位因太少无意义
@@ -56,5 +46,8 @@ public class FileUtils {
         System.out.println(a + "byte");
         return size > a;
     }
-*/
+
+}
+
+
 
