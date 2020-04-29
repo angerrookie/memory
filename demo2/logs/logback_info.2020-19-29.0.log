@@ -1,0 +1,4 @@
+11:19:57 logback [main] INFO  c.p.memory.MemoryApplicationTests- Starting MemoryApplicationTests on PC-20181213RMDW with PID 3104 (started by Administrator in G:\practice\JAVADocument\memory)
+11:19:57 logback [main] INFO  c.p.memory.MemoryApplicationTests- No active profile set, falling back to default profiles: default
+11:19:59 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+11:19:59 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 216ms. Found 1 MongoDB repository interfaces.
