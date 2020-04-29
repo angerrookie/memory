@@ -1,1 +1,1 @@
-23:26:27 logback [http-nio-8080-exec-1] ERROR c.p.memory.handle.ExceptionHandle- 系统异常 >>>>>> invalid hexadecimal representation of an ObjectId: [i5ea83d604e3c6501208bcc14]
+09:47:44 logback [http-nio-8080-exec-1] ERROR c.p.memory.handle.ExceptionHandle- 系统异常 >>>>>> String index out of range: -1
