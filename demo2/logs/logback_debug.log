@@ -1,0 +1,124 @@
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(2)-169.254.111.42: accepted socket from [169.254.111.42:55699]
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(2)-169.254.111.42: (port 55696) op = 80
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(2)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(2)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(2)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(2)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:00 logback [RMI TCP Connection(2)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(2)-169.254.111.42: name = "[B", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: accepted socket from [169.254.111.42:55700]
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.dgc.Lease", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "[B", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.dgc.Lease", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "[B", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 84
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(3)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:01 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: accepted socket from [169.254.111.42:55706]
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.dgc.Lease", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "[B", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 84
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 82
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 82
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) op = 80
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:02 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(4)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: accepted socket from [169.254.111.42:55707]
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.dgc.Lease", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 84
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG o.s.c.e.PropertySourcesPropertyResolver- Found key 'local.server.port' in PropertySource 'server.ports' with value of type Integer
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.dgc.Lease", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 84
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "javax.management.ObjectName", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "java.rmi.MarshalledObject", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[B", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(5)-169.254.111.42: name = "[Ljava.lang.String;", codebase = ""
+21:13:03 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) op = 80
+21:13:08 logback [cluster-ClusterId{value='5ea82bdafa919b710b511f30', description='null'}-127.0.0.1:27017] DEBUG org.mongodb.driver.cluster- Checking status of 127.0.0.1:27017
+21:13:08 logback [cluster-ClusterId{value='5ea82bdafa919b710b511f30', description='null'}-127.0.0.1:27017] DEBUG org.mongodb.driver.protocol.command- Sending command '{"ismaster": 1, "$db": "admin"}' with request id 4 to database admin on connection [connectionId{localValue:1, serverValue:1}] to server 127.0.0.1:27017
+21:13:08 logback [cluster-ClusterId{value='5ea82bdafa919b710b511f30', description='null'}-127.0.0.1:27017] DEBUG org.mongodb.driver.protocol.command- Execution of command with request id 4 completed successfully in 12.25 ms on connection [connectionId{localValue:1, serverValue:1}] to server 127.0.0.1:27017
+21:13:08 logback [cluster-ClusterId{value='5ea82bdafa919b710b511f30', description='null'}-127.0.0.1:27017] DEBUG org.mongodb.driver.cluster- Updating cluster description to  {type=STANDALONE, servers=[{address=127.0.0.1:27017, type=STANDALONE, roundTripTime=98.9 ms, state=CONNECTED}]
+21:13:08 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: (port 55696) connection closed
+21:13:08 logback [RMI TCP Connection(5)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(5)-169.254.111.42: close connection
+21:13:08 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: (port 55696) connection closed
+21:13:08 logback [RMI TCP Connection(4)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(4)-169.254.111.42: close connection
+21:13:08 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: (port 55696) connection closed
+21:13:08 logback [RMI TCP Connection(3)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(3)-169.254.111.42: close connection
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(6)-169.254.111.42: accepted socket from [169.254.111.42:55710]
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.transport.tcp- RMI TCP Connection(6)-169.254.111.42: (port 55696) op = 80
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(6)-169.254.111.42: name = "[Ljava.rmi.server.ObjID;", codebase = ""
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(6)-169.254.111.42: name = "java.rmi.server.ObjID", codebase = ""
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(6)-169.254.111.42: name = "java.rmi.server.UID", codebase = ""
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(6)-169.254.111.42: name = "java.rmi.dgc.VMID", codebase = ""
+21:13:09 logback [RMI TCP Connection(6)-169.254.111.42] DEBUG sun.rmi.loader- RMI TCP Connection(6)-169.254.111.42: name = "[B", codebase = ""

@@ -1,0 +1,1 @@
+08:52:27 logback [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'

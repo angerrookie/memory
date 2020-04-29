@@ -1,0 +1,10 @@
+23:29:11 logback [main] INFO  c.p.memory.MemoryApplicationTests- Starting MemoryApplicationTests on PC-20181213RMDW with PID 10296 (started by Administrator in G:\practice\JAVADocument\memory)
+23:29:11 logback [main] INFO  c.p.memory.MemoryApplicationTests- No active profile set, falling back to default profiles: default
+23:29:12 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+23:29:12 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 182ms. Found 1 MongoDB repository interfaces.
+23:29:15 logback [main] INFO  org.mongodb.driver.cluster- Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+23:29:16 logback [cluster-ClusterId{value='5ea84bcba6c3b85de6a495b3', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:1, serverValue:28}] to 127.0.0.1:27017
+23:29:16 logback [cluster-ClusterId{value='5ea84bcba6c3b85de6a495b3', description='null'}-127.0.0.1:27017] INFO  org.mongodb.driver.cluster- Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 6]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4408152}
+23:29:17 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+23:29:18 logback [main] INFO  c.p.memory.MemoryApplicationTests- Started MemoryApplicationTests in 8.4 seconds (JVM running for 11.093)
+23:29:18 logback [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
