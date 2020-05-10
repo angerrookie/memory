@@ -54,6 +54,7 @@ public class UploadServiceImpl implements IUploadService {
     public ResponseReturn saveFile(MultipartFile[] files) {
         //file的校验
         try {
+            //对文件按大小分装
             Map<String, Object> objectMap = check(files);
             //小文件集合  可以一次性插入
             List<FileModel> bsons = (List<FileModel>) objectMap.get("bsons");
@@ -65,7 +66,11 @@ public class UploadServiceImpl implements IUploadService {
 
             //大文件管理文档
             List<FileDocument> list = saveByGridFS(gridfs);
-
+            //文件插入完毕
+            //拿到插入文件的详细信息：
+            // 小文件：文件名  文件类型 文件后缀名 文件大小 文件id（拿到comment信息）
+            //大文件：文件名 文件类型 文件后缀名 文件大小 文件管理文档的_id:(拿到fileDocument信息)
+            //fileDocument:gridfsId-->fs.files:filename-->fs.files:_id-->fs.chunks:files_id
             objectMap.put("bsons",bsons);
             objectMap.put("gridfs",list);
 
@@ -173,19 +178,6 @@ public class UploadServiceImpl implements IUploadService {
         return null;
     }
 
-    /**
-     * 功能描述: 分页显示所有文件
-     * @Param: []
-     * @Return: com.pubinfo.memory.dto.ResponseReturn
-     * @Author: Administrator
-     * @Date: 2020/4/29 17:08
-     */
-    @Override
-    public ResponseReturn list() {
-        List<FileModel> all = uploadRepository.findAll();
-        return ResponseReturn.addSuccess(all);
-    }
-
     public Map<String, Object> check(MultipartFile[] files) throws IOException, NoSuchAlgorithmException {
 
 
@@ -213,7 +205,7 @@ public class UploadServiceImpl implements IUploadService {
                 fileModel.setContent(content);
                 fileModel.setContentType(contentType);
                 fileModel.setSuffix(suffix);
-                fileModel.setSize(size);
+                fileModel.setSize(length);
                 fileModel.setUploadDate(new Date());
                 fileModel.setMd5(MD5Util.getMD5(files[k].getInputStream()));
 
@@ -226,5 +218,26 @@ public class UploadServiceImpl implements IUploadService {
         map.put("gridfs", gridfs);
 
         return map;
+    }
+
+    /**
+     * 功能描述: 查出所有文件信息
+     * @Param: []
+     * @Return: com.pubinfo.memory.dto.ResponseReturn
+     * @Author: Administrator
+     * @Date: 2020/5/11 2:29
+     */
+    @Override
+    public ResponseReturn filesList(){
+        //拿到小文件信息
+        List<FileModel> fileModels = mongoTemplate.findAll(FileModel.class);
+        //拿到大文件信息
+        List<FileDocument> fileDocuments = mongoTemplate.findAll(FileDocument.class);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("fileModels",fileModels);
+        map.put("fileDocuments",fileDocuments);
+
+        return ResponseReturn.addSuccess(map);
     }
 }

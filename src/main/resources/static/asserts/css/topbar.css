@@ -1,0 +1,174 @@
+body{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:640px;
+}
+/*顶部*/
+.container-top {
+    width: 100%;
+    height: 90px;
+    background-color: #67A8E7;
+}
+.backcolor{
+    /*background-color: #E3DFDF;*/
+    background: linear-gradient(to bottom,#E3DFDF,#EBE9E9);
+}
+/*logo*/
+.container-logo{
+    width: 13%;
+    height: 90px;
+    float: left;
+    /*background-color: beige;*/
+    background-image: url("/asserts/img/cd-logo.png");
+    background-size: 150px 90px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*导航栏*/
+.container-menu{
+    margin-left: 3%;
+    width: 65%;
+    height: 60px;
+    margin-top: 15px;
+    /*background-color: azure;*/
+    float: left;
+}
+.menu-ul{
+    width: 100%;
+    height: 60px;
+    margin-top: 0;
+    list-style: none;
+}
+.menu-ul li{
+    width: 16%;
+    height: 60px;
+    /*background-color: #1e7e34;*/
+    text-align: center;
+    line-height: 60px;
+    font-weight: bolder;
+    float: left;
+}
+.menu-ul li:hover {
+    color: white;
+}
+/*子菜单设置*/
+.menu-ul-li-ul {
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    position: absolute;
+    list-style: none;
+    background: #67A8E7;
+    color: black;
+}
+
+.menu-ul-li-ul li {
+    width: 100%;
+    height: 30px;
+    margin: 10px 15px 10px -25px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    float: none;
+}
+.menu-ul-li .menu-ul-li-ul{
+    display: none;
+}
+.menu-ul-li:hover .menu-ul-li-ul{
+    display: block;
+}
+/*登录注册按钮*/
+.container-state{
+    float: right;
+    width: 14%;
+    height: 90px;
+    /*background-color: #4aa6bf;*/
+}
+.container-state-btn{
+    width: 100%;
+    height: 60px;
+    /*background-color: #007bff;*/
+    margin-top: 25px;
+}
+.btn-style{
+    margin-left: 15px;
+}
+/*首页背景图片*/
+.main-background{
+    width: 100%;
+    height: 800px;
+    background-image: url("/asserts/img/cd-hero-background.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    position: relative;
+}
+/*登录注册表单*/
+.div-form-back{
+    top: 0px;
+    width: 100%;
+    height: 890px;
+    background: #999;
+    position: absolute;
+    opacity: 0.8;
+    display: none;
+}
+.div-form-on{
+    width:38%;
+    /*height:560px;*/
+    position: absolute;
+    background-color: #007bff;
+    margin-top:6%;
+    margin-left:31%;
+}
+.form-btn{
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    margin-top: 10px;
+    /*background-color: #0056b3;*/
+}
+.btn-login{
+    width: 50%;
+    height: 38px;
+    float: left;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.btn-register{
+    width: 50%;
+    height: 38px;
+    border-radius: 0 10px 10px 0;
+    float: left;
+    text-align: center;
+    font-weight: bolder;
+}
+.form-style{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+}
+.btn-submit{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+.btn-submit:hover{
+    background-color: #67A8E7;
+}
+.form-national{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    /*background-color: white;*/
+}
+.btn-zh{
+     margin-left: 38%;
+}
+.btn-en{
+    margin-left: 10px;
+}

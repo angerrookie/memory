@@ -1,2 +1,42 @@
 logging:
     filePath: demo2/logs
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/memory?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+mybatis-plus:
+    #把xml文件放在com.XX.mapper.*中可能会出现找到的问题,这里把他放在resource下的mapper中
+    mapper-locations: classpath:mybatis/mapper/*.xml
+    #实体扫描，多个package用逗号或者分号分隔
+    typeAliasesPackage: com.springboot.pojo
+    #typeEnumsPackage: com.baomidou.springboot.entity.enums
+    global-config:
+      #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+      id-type: 0
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: 2
+      #驼峰下划线转换
+      db-column-underline: true
+      #刷新mapper 调试神器
+      refresh-mapper: true
+      #数据库大写下划线转换
+      #capital-mode: true
+      #序列接口实现类配置
+      #key-generator: com.gy.demo.xxx
+      #自定义填充策略接口实现
+      #meta-object-handler: com.gy.demo.xxx
+      #自定义SQL注入器
+      #sql-injector: com.gy.demo.xxx
+      #逻辑删除配置
+      db-config:
+        logic-delete-field: isDeleted
+        logic-delete-value: 1
+        logic-not-delete-value: 0
+      configuration:
+        #驼峰转换
+        map-underscore-to-camel-case: true
+        #全局缓存处理
+        cache-enabled: false
+

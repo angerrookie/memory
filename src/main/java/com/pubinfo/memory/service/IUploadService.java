@@ -42,5 +42,6 @@ public interface IUploadService {
      * @Author: Administrator
      * @Date: 2020/4/29 8:22
      */
-    ResponseReturn list();
+    ResponseReturn filesList();
+
 }

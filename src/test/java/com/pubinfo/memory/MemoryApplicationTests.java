@@ -15,6 +15,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
+import java.util.List;
+
 @SpringBootTest
 class MemoryApplicationTests {
 
@@ -38,5 +40,10 @@ class MemoryApplicationTests {
 
         FileDocument byId1 = mongoTemplate.findById("5ea93443c3fed1115d4343cc", FileDocument.class);
         System.out.println("---->"+byId1.toString());
+    }
+    @Test
+    public void test2(){
+        List<FileDocument> all = mongoTemplate.findAll(FileDocument.class);
+        System.out.println(all);
     }
 }

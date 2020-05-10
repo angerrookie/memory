@@ -17,7 +17,7 @@ public class ResponseReturn {
      */
     private Object data;
 
-    public ResponseReturn(boolean success) {
+    public ResponseReturn() {
         super();
         this.success = success;
     }

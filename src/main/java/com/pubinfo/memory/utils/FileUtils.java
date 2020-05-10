@@ -7,6 +7,7 @@ public class FileUtils {
 
         double v = type.getCode() * limitSize;
         long l = new Double(Math.ceil(v)).longValue();
+        System.out.println("---->文件大小:"+size+""+type.getType());
         System.out.println("---->限制大小：" + l + "" + type.getType());
         return size < l;
     }

@@ -24,8 +24,8 @@ import java.util.Date;
 import java.util.List;
 
 
-@RestController
-@RequestMapping("/file")
+@Controller
+@RequestMapping("/files")
 public class UploadController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UploadController.class);
@@ -40,6 +40,7 @@ public class UploadController {
      * @Author: Administrator
      * @Date: 2020/4/29 8:20
      */
+    @ResponseBody
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     public ResponseReturn saveFile(@RequestParam("file")MultipartFile[] file, HttpServletRequest request){
 
@@ -72,12 +73,26 @@ public class UploadController {
      * @Author: Administrator
      * @Date: 2020/4/29 8:22
      */
-    @RequestMapping(value = "/files",method = RequestMethod.GET)
-    public ResponseReturn list(){
+    @ResponseBody
+    @RequestMapping(value = "/filesList",method = RequestMethod.POST)
+    public ResponseReturn filesList(){
 
         LOGGER.info(">>>>>>>>>>>>文件列表:");
         LOGGER.info(">>>>>>>>>>>>执行方法开始....：");
 
-        return uploadService.list();
+        return uploadService.filesList();
+    }
+
+    /**
+     * 功能描述: 添加文件
+     * @Param: []
+     * @Return: java.lang.String
+     * @Author: Administrator
+     * @Date: 2020/5/11 2:29
+     */
+    @GetMapping(value = "/addFile")
+    public String toAdd(){
+
+        return "addFile";
     }
 }

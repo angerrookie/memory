@@ -1,0 +1,82 @@
+body{
+    background-color: #EBE9E9;
+}
+/*左侧边框*/
+.info-left{
+    width: 15%;
+    min-width: 220px;
+    max-width: 250px;
+    background-color: white;
+    margin-left: 15%;
+    height: 640px;
+    /*border: 1px solid #0056b3;*/
+    float: left;
+}
+.info-left-logo{
+    width: 100px;
+    height: 150px;
+    background-color: white;
+    margin: 20px auto;
+}
+.logo{
+    width: 100%;
+    max-width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-image: url("/asserts/img/cd-hero-background.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.info{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: #EBE9E9;
+    border: 1px solid white;
+}
+.left-bar{
+    width: 100%;
+    background-color: white;
+    /*border: 1px solid mediumblue;*/
+}
+.left-bar-btn{
+    width:100%;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+
+    /*background-color: #E7E5E5;*/
+}
+.left-bar-btn:hover{
+    background-color: #EBE9E9;
+}
+.left-bar-btn a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.hover {
+    background-color: white;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.hover:hover, .hover:focus, .hover:active {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    background-color: #EBE9E9;
+}
+.select{
+    background-color: #EBE9E9;
+}

@@ -1,0 +1,18 @@
+.info-right{
+    width: 60%;
+    margin-left: 1%;
+    background-color: white;
+    /*background-color: #E7E5E5;*/
+    float: left;
+    margin-top: 15px;
+}
+.table-style{
+    width: 98%;
+    text-align: center;
+    background-color: #ACACAC;
+}
+.table-input{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+}

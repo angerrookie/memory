@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文件列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/popper.js/1.15.0/umd/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{asserts/css/topbar.css}">
+    <link rel="stylesheet" th:href="@{asserts/css/leftbar.css}">
+</head>
+<script type="text/javascript">
+    function altRows(id){
+        if(document.getElementsByTagName){
+
+            var table = document.getElementById(id);
+            var rows = table.getElementsByTagName("tr");
+
+            for(i = 0; i < rows.length; i++){
+                if(i % 2 == 0){
+                    rows[i].className = "evenrowcolor";
+                }else{
+                    rows[i].className = "oddrowcolor";
+                }
+            }
+        }
+    }
+
+    window.onload=function(){
+        altRows('alternatecolor');
+    }
+
+    function getAllFiles() {
+
+        $.ajax({
+            type : "POST",
+            url : "files/filesList",
+            dataType:"json",
+            success : function(msg) {
+                console.log(msg);
+                console.log(msg.data);
+                if (msg.success==true){
+                    var fileMoels = msg.data.fileModels;
+                    var fileDocuments = msg.data.fileDocuments;
+                    console.log("fileModels:"+fileMoels);
+                    console.log("fileDocuments:"+fileDocuments);
+                    var index=0;
+                    for (var i=0;i<fileMoels.length;i++){
+                         index = i+1;
+                        $("#list").html($("#list").html() +
+                            "<tr><td>"+index+"</td>"+
+                            "<td>"+fileMoels[i].name+"</td>"+
+                            "<td>"+fileMoels[i].contentType+"</td>"+
+                            "<td>"+fileMoels[i].size+"</td>"+
+                            "<td>"+fileMoels[i].uploadDate+"</td>"+
+                            "<td><a href='files/download/'"+fileMoels[i].id+">"+"下载"+"</a></td></tr>"
+                        );
+                    }
+                    for (var i=0;i<fileDocuments.length;i++){
+                        var index1 = i+index+1;
+                        $("#list").html($("#list").html() +
+                            "<tr><td>"+index1+"</td>"+
+                            "<td>"+fileDocuments[i].name+"</td>"+
+                            "<td>"+fileDocuments[i].contentType+"</td>"+
+                            "<td>"+fileDocuments[i].size+"</td>"+
+                            "<td>"+fileDocuments[i].uploadDate+"</td>"+
+                            "<td><a href='files/download/'"+fileDocuments[i].id+">"+"下载"+"</a></td></tr>"
+                        );
+                    }
+                    $("#list").append(
+                        "<tr> <td colspan='6'>"+
+                        "<div style='width: 20%;margin-left: 40%'>"+
+                        "<a href='#'>上一页</a>&nbsp;&nbsp;"+
+                        "<a href='#'>下一页</a>"+
+                        " </div> </td> </tr>"
+                    );
+                }else{
+                    window.location.href="http://127.0.0.1:8080/";
+                }
+            }
+        });
+    }
+</script>
+<style type="text/css">
+    tr{
+        height: 30px;
+        text-align: center;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:link{
+        text-decoration:none;   /* 指正常的未被访问过的链接*/
+    }
+    a:visited{
+        text-decoration:none; /*指已经访问过的链接*/
+    }
+    a:hover{
+        text-decoration:none;/*指鼠标在链接*/
+    }
+    a:active {
+        text-decoration: none; /* 指正在点的链接*/
+    }
+</style>
+<body onload="getAllFiles()">
+<a th:href="@{/files/addFile}">
+    <input type="button" class="btn-success btn-sm" value="添加文件" style="margin-left: 20%;text-align: center;">
+</a>
+<div style="width: 60%;height: 400px;background-color: aliceblue;margin-left: 20%;">
+    <table class="table table-hover">
+       <!-- <caption>悬停表格布局</caption>-->
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>文件名</th>
+                <th>文件类型</th>
+                <th>文件大小(/KB)</th>
+                <th>上传时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="list">
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加文件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/popper.js/1.15.0/umd/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+
+<script type="text/javascript">
+function upload() {
+    var formData = new FormData($("#form1")[0]);  //重点：要用这种方法接收表单的参数
+    $.ajax({
+        url: "/files/upload",
+        type: 'POST',
+        data: formData,
+        // 告诉jQuery不要去处理发送的数据
+        processData: false,
+        // 告诉jQuery不要去设置Content-Type请求头
+        contentType: false,
+        async: false,
+        success: function (data) {
+            console.log("succsee:"+data.success);
+            if (data.success==true){
+                var r = confirm("前往查看文件列表")
+                if (r == true) {
+                    window.location.href="http://127.0.0.1:8080/";
+                } else {
+
+                }
+            }else {
+               console.log("失败数据："+data.data);
+                $("#msg").text("请重试");
+            }
+        },
+    });
+}
+</script>
+
+<body>
+    <div style="width: 50%;margin-left: 25%;">
+        <form action="/files/upload" method="post" enctype="multipart/form-data" id="form1">
+            <div class="form-group">
+                <label for="selectfile">选择图片:</label>
+                <input type="file" multiple="multiple" name="file" id="selectfile" class="form-control"
+                       placeholder="选择图片">
+            </div>
+            <span style="color: red;" id="msg"></span><br>
+            <input type="button"  class="btn-info btn btn-select"
+                   style="width: 150px;height: 40px;margin-top: 15px;"value="上传" onclick="upload()"/>
+        </form>
+    </div>
+</body>
+</html>
