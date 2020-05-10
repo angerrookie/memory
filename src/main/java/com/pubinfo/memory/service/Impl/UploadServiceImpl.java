@@ -58,13 +58,18 @@ public class UploadServiceImpl implements IUploadService {
             //小文件集合  可以一次性插入
             List<FileModel> bsons = (List<FileModel>) objectMap.get("bsons");
             if (bsons.size() != 0) {
-                uploadRepository.saveAll(bsons);
+                bsons = uploadRepository.saveAll(bsons);
             }
             //大文件集合  使用GridFS存储
             List<MultipartFile> gridfs = (List<MultipartFile>) objectMap.get("gridfs");
-            ResponseReturn responseReturn = saveByGridFS(gridfs);
 
-            return ResponseReturn.addSuccess(responseReturn);
+            //大文件管理文档
+            List<FileDocument> list = saveByGridFS(gridfs);
+
+            objectMap.put("bsons",bsons);
+            objectMap.put("gridfs",list);
+
+            return ResponseReturn.addSuccess(objectMap);
         } catch (IOException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
@@ -72,8 +77,16 @@ public class UploadServiceImpl implements IUploadService {
         return ResponseReturn.unknownError();
     }
 
-    public ResponseReturn saveByGridFS(List<MultipartFile> files) {
+    /**
+     * 功能描述: 循环存储大文件、大文件管理文档（gridfsId属性是fs.files文档的filename）
+     * @Param: [files]
+     * @Return: com.pubinfo.memory.dto.ResponseReturn 返回大文件管理文档
+     * @Author: Administrator
+     * @Date: 2020/4/29 16:52
+     */
+    public List<FileDocument> saveByGridFS(List<MultipartFile> files) {
         int size = files.size();
+        List<FileDocument> list = new ArrayList<>();
         InputStream in = null;
         for (int i = 0; i < size; i++) {
             try {
@@ -85,12 +98,12 @@ public class UploadServiceImpl implements IUploadService {
                 //大文件管理
                 FileDocument fileDocument1 = saveFile(files.get(i), gridfsId);
 
-                return ResponseReturn.addSuccess(fileDocument1);
+                list.add(fileDocument1);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        return ResponseReturn.unknownError();
+        return list;
     }
 
     /**
@@ -160,6 +173,13 @@ public class UploadServiceImpl implements IUploadService {
         return null;
     }
 
+    /**
+     * 功能描述: 分页显示所有文件
+     * @Param: []
+     * @Return: com.pubinfo.memory.dto.ResponseReturn
+     * @Author: Administrator
+     * @Date: 2020/4/29 17:08
+     */
     @Override
     public ResponseReturn list() {
         List<FileModel> all = uploadRepository.findAll();
