@@ -1,27 +1,39 @@
-02:26:05 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Starting MemoryApplication on PC-20181213RMDW with PID 11784 (G:\practice\JAVADocument\memory\target\classes started by Administrator in G:\practice\JAVADocument\memory)
-02:26:05 logback [main] INFO  com.pubinfo.memory.MemoryApplication- No active profile set, falling back to default profiles: default
-02:26:07 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-02:26:07 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 114ms. Found 2 MongoDB repository interfaces.
-02:26:08 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-02:26:08 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Initializing ProtocolHandler ["http-nio-8080"]
-02:26:08 logback [main] INFO  o.a.catalina.core.StandardService- Starting service [Tomcat]
-02:26:08 logback [main] INFO  o.a.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.33]
-02:26:08 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-02:26:08 logback [main] INFO  o.s.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 3001 ms
-02:26:10 logback [main] INFO  org.mongodb.driver.cluster- Cluster created with settings {hosts=[47.98.107.240:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-02:26:10 logback [cluster-ClusterId{value='5eb847428ae61c1cf794c120', description='null'}-47.98.107.240:27017] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:1, serverValue:1091}] to 47.98.107.240:27017
-02:26:10 logback [cluster-ClusterId{value='5eb847428ae61c1cf794c120', description='null'}-47.98.107.240:27017] INFO  org.mongodb.driver.cluster- Monitor thread successfully connected to server with description ServerDescription{address=47.98.107.240:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 18]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11796258}
-02:26:11 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-02:26:13 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Starting ProtocolHandler ["http-nio-8080"]
-02:26:13 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-02:26:13 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Started MemoryApplication in 9.551 seconds (JVM running for 12.927)
-02:26:24 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-02:26:24 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-02:26:24 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet- Completed initialization in 45 ms
-02:26:25 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>文件列表:
-02:26:25 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>执行方法开始....：
-02:26:26 logback [http-nio-8080-exec-2] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:2, serverValue:1093}] to 47.98.107.240:27017
-02:26:34 logback [http-nio-8080-exec-1] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>上传文件:
-02:26:34 logback [http-nio-8080-exec-1] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>执行方法开始，文件数量：1
-02:26:36 logback [http-nio-8080-exec-7] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>文件列表:
-02:26:36 logback [http-nio-8080-exec-7] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>执行方法开始....：
+05:35:26 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Starting MemoryApplication on PC-20181213RMDW with PID 576 (G:\practice\JAVADocument\memory\target\classes started by Administrator in G:\practice\JAVADocument\memory)
+05:35:26 logback [main] INFO  com.pubinfo.memory.MemoryApplication- No active profile set, falling back to default profiles: default
+05:35:29 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+05:35:29 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 99ms. Found 2 MongoDB repository interfaces.
+05:35:29 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'shiroConfig' of type [com.pubinfo.memory.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$3ec2b530] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$5ab991cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:30 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'userRepository' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'userRepository' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'userService' of type [com.pubinfo.memory.service.Impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:31 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'userRealm' of type [com.pubinfo.memory.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:33 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05:35:34 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+05:35:34 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Initializing ProtocolHandler ["http-nio-8080"]
+05:35:34 logback [main] INFO  o.a.catalina.core.StandardService- Starting service [Tomcat]
+05:35:34 logback [main] INFO  o.a.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.33]
+05:35:36 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+05:35:36 logback [main] INFO  o.s.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 9591 ms
+05:35:37 logback [main] INFO  org.mongodb.driver.cluster- Cluster created with settings {hosts=[47.98.107.240:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+05:35:37 logback [cluster-ClusterId{value='5eb9c5295e71603f59237a0e', description='null'}-47.98.107.240:27017] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:1, serverValue:1253}] to 47.98.107.240:27017
+05:35:37 logback [cluster-ClusterId{value='5eb9c5295e71603f59237a0e', description='null'}-47.98.107.240:27017] INFO  org.mongodb.driver.cluster- Monitor thread successfully connected to server with description ServerDescription{address=47.98.107.240:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 18]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10100101}
+05:35:38 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+05:35:39 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol- Starting ProtocolHandler ["http-nio-8080"]
+05:35:39 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+05:35:39 logback [main] INFO  com.pubinfo.memory.MemoryApplication- Started MemoryApplication in 14.592 seconds (JVM running for 16.727)
+05:35:39 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+05:35:39 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+05:35:39 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet- Completed initialization in 9 ms
+05:35:49 logback [http-nio-8080-exec-9] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Starting...
+05:35:50 logback [http-nio-8080-exec-9] INFO  com.zaxxer.hikari.HikariDataSource- HikariPool-1 - Start completed.
+05:35:50 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>文件列表:
+05:35:50 logback [http-nio-8080-exec-2] INFO  c.p.m.controller.UploadController- >>>>>>>>>>>>执行方法开始....：
+05:35:51 logback [http-nio-8080-exec-2] INFO  org.mongodb.driver.connection- Opened connection [connectionId{localValue:2, serverValue:1254}] to 47.98.107.240:27017

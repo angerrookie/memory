@@ -1,6 +1,6 @@
 package com.pubinfo.memory;
 
-import com.pubinfo.memory.dto.ResponseReturn;
+import com.pubinfo.memory.common.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import com.pubinfo.memory.repository.FileDocRepository;

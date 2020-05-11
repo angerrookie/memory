@@ -1,7 +1,7 @@
 package com.pubinfo.memory.controller;
 
 
-import com.pubinfo.memory.dto.ResponseReturn;
+import com.pubinfo.memory.common.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import com.pubinfo.memory.service.IUploadService;
@@ -17,6 +17,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -74,13 +76,25 @@ public class UploadController {
      * @Date: 2020/4/29 8:22
      */
     @ResponseBody
-    @RequestMapping(value = "/filesList",method = RequestMethod.POST)
+    @RequestMapping(value = "/filesList",method = RequestMethod.GET)
     public ResponseReturn filesList(){
 
         LOGGER.info(">>>>>>>>>>>>文件列表:");
         LOGGER.info(">>>>>>>>>>>>执行方法开始....：");
 
         return uploadService.filesList();
+    }
+
+    @RequestMapping(value = "/download/{id}",method = RequestMethod.GET)
+    public String test(@PathVariable("id")String id, HttpServletRequest request){
+        System.out.println("---get--"+id);
+            request.getSession().setAttribute("id",id);
+        return "test";
+    }
+
+    @RequestMapping(value = "/download/{id}",method = RequestMethod.POST)
+    public void test1(@PathVariable("id")String id,HttpServletRequest request){
+        System.out.println("---post--"+id);
     }
 
     /**
@@ -92,7 +106,7 @@ public class UploadController {
      */
     @GetMapping(value = "/addFile")
     public String toAdd(){
-
+            System.out.println("--------addFile--");
         return "addFile";
     }
 }

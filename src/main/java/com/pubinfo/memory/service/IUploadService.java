@@ -1,7 +1,7 @@
 package com.pubinfo.memory.service;
 
 
-import com.pubinfo.memory.dto.ResponseReturn;
+import com.pubinfo.memory.common.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import org.springframework.web.multipart.MultipartFile;

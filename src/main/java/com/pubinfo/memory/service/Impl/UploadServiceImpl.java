@@ -3,7 +3,7 @@ package com.pubinfo.memory.service.Impl;
 
 import cn.hutool.core.util.IdUtil;
 import com.mongodb.client.gridfs.GridFSBucket;
-import com.pubinfo.memory.dto.ResponseReturn;
+import com.pubinfo.memory.common.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import com.pubinfo.memory.repository.UploadRepository;

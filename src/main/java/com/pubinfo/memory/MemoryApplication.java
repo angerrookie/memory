@@ -1,6 +1,7 @@
 package com.pubinfo.memory;
 
 import org.apache.coyote.http11.AbstractHttp11Protocol;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
@@ -8,6 +9,7 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@MapperScan("com.pubinfo.memory.repository")
 public class MemoryApplication {
 
     public static void main(String[] args) {

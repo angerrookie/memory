@@ -1,4 +1,4 @@
-package com.pubinfo.memory.exceptions;
+package com.pubinfo.memory.common.exceptions;
 
 public class BusinessProcessingException extends RuntimeException{
 

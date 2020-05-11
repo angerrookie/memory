@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/popper.js/1.15.0/umd/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+<script type="text/javascript">
+    function login() {
+        var userName = $("#userName").val();
+        var password = $("#password").val();
+        alert("login");
+        $.ajax({
+            type : "POST",
+            url : "sys_user/login",
+            data :{'userName':userName,'passWord':password},
+            dataType:"json",
+            success:function (data) {
+                alert(data.code);
+                console.log(data);
+                window.location.href="http://127.0.0.1:8080/list.html";
+            },
+            error:function (data) {
+                alert(data.code);
+                console.log(data);
+            }
+            }
+        );
+    }
+</script>
+<body>
+<div style="width: 50%;height: 100px;margin-left: 25%;margin-top: 100px;">
+    <form action="/login" method="post">
+        用户名: <input id="userName" type="text" name="userName" style="width: 150px;height: 20px;border: 1px black solid;"><br>
+        密&nbsp;&nbsp;码: <input id="password" type="password" name="passWord" style="width: 150px;height: 20px;border: 1px black solid;"><br>
+        <input type="button" value="登录" onclick="login()" style="width: 50px;height: 30px;text-align: center;line-height: 30px;margin-left: 50px;">
+    </form>
+</div>
+</body>
+</html>

@@ -1,11 +1,11 @@
-package com.pubinfo.memory.handle;
+package com.pubinfo.memory.common.handler;
 
-
-import com.pubinfo.memory.dto.ResponseReturn;
-import com.pubinfo.memory.exceptions.AuthorizationException;
-import com.pubinfo.memory.exceptions.BusinessProcessingException;
-import com.pubinfo.memory.exceptions.LoginAuthorException;
-import com.pubinfo.memory.exceptions.ParamException;
+import com.pubinfo.memory.common.dto.ResponseReturn;
+import com.pubinfo.memory.common.exceptions.BusinessProcessingException;
+import com.pubinfo.memory.common.exceptions.LoginAuthorException;
+import com.pubinfo.memory.common.exceptions.ParamException;
+import com.pubinfo.memory.common.exceptions.RegisterException;
+import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MissingServletRequestParameterException;
@@ -28,6 +28,9 @@ public class ExceptionHandle {
             LOGGER.error("请求参数异常 >>>>>> 404 (灬ꈍ ꈍ灬) {}", e.getLocalizedMessage());
             return ResponseReturn.dataIsNUll();
         } else if (e instanceof LoginAuthorException) {
+            LOGGER.error("登录异常 >>>>>> {}", e.getLocalizedMessage());
+            return ResponseReturn.loginUnAuthorized();
+        }else if (e instanceof RegisterException) {
             LOGGER.error("登录异常 >>>>>> {}", e.getLocalizedMessage());
             return ResponseReturn.loginUnAuthorized();
         } else if (e instanceof RuntimeException) {

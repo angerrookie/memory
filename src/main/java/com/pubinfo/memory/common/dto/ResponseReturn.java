@@ -1,4 +1,4 @@
-package com.pubinfo.memory.dto;
+package com.pubinfo.memory.common.dto;
 
 public class ResponseReturn {
 
@@ -17,7 +17,7 @@ public class ResponseReturn {
      */
     private Object data;
 
-    public ResponseReturn() {
+    public ResponseReturn(boolean success) {
         super();
         this.success = success;
     }

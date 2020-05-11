@@ -28,15 +28,9 @@
             }
         }
     }
-
-    window.onload=function(){
-        altRows('alternatecolor');
-    }
-
     function getAllFiles() {
-
         $.ajax({
-            type : "POST",
+            type : "GET",
             url : "files/filesList",
             dataType:"json",
             success : function(msg) {
@@ -48,7 +42,10 @@
                     console.log("fileModels:"+fileMoels);
                     console.log("fileDocuments:"+fileDocuments);
                     var index=0;
+                    var id = "#";
                     for (var i=0;i<fileMoels.length;i++){
+                        console.log("id:"+fileMoels[i].id);
+                        id = fileMoels[i].id;
                          index = i+1;
                         $("#list").html($("#list").html() +
                             "<tr><td>"+index+"</td>"+
@@ -56,10 +53,11 @@
                             "<td>"+fileMoels[i].contentType+"</td>"+
                             "<td>"+fileMoels[i].size+"</td>"+
                             "<td>"+fileMoels[i].uploadDate+"</td>"+
-                            "<td><a href='files/download/'"+fileMoels[i].id+">"+"下载"+"</a></td></tr>"
+                            "<td><a href=\"files/download/"+id+"\">下载</a></td></tr>"
                         );
                     }
                     for (var i=0;i<fileDocuments.length;i++){
+                        id = fileDocuments[i].id;
                         var index1 = i+index+1;
                         $("#list").html($("#list").html() +
                             "<tr><td>"+index1+"</td>"+
@@ -67,7 +65,8 @@
                             "<td>"+fileDocuments[i].contentType+"</td>"+
                             "<td>"+fileDocuments[i].size+"</td>"+
                             "<td>"+fileDocuments[i].uploadDate+"</td>"+
-                            "<td><a href='files/download/'"+fileDocuments[i].id+">"+"下载"+"</a></td></tr>"
+                            "<td><a href=\"files/download/"+id+"\">下载</a></td></tr>"
+
                         );
                     }
                     $("#list").append(
@@ -78,10 +77,13 @@
                         " </div> </td> </tr>"
                     );
                 }else{
-                    window.location.href="http://127.0.0.1:8080/";
+                    window.location.href="http://127.0.0.1:8080/list.html";
                 }
             }
         });
+    }
+    function download(id) {
+        alert(id);
     }
 </script>
 <style type="text/css">
@@ -107,9 +109,9 @@
 </style>
 <body onload="getAllFiles()">
 <a th:href="@{/files/addFile}">
-    <input type="button" class="btn-success btn-sm" value="添加文件" style="margin-left: 20%;text-align: center;">
+    <input type="button" class="btn-success btn-sm" value="添加文件" style="margin-left: 15%;text-align: center;">
 </a>
-<div style="width: 60%;height: 400px;background-color: aliceblue;margin-left: 20%;">
+<div style="width: 70%;height: 400px;background-color: aliceblue;margin-left: 15%;">
     <table class="table table-hover">
        <!-- <caption>悬停表格布局</caption>-->
         <thead>

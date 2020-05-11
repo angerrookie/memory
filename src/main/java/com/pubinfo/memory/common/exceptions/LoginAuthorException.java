@@ -1,4 +1,4 @@
-package com.pubinfo.memory.exceptions;
+package com.pubinfo.memory.common.exceptions;
 
 /**
  * 版权所有： 浙江省公众信息产业有限公司智慧旅游（事业）部
