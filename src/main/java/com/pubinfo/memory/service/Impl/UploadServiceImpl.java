@@ -3,7 +3,7 @@ package com.pubinfo.memory.service.Impl;
 
 import cn.hutool.core.util.IdUtil;
 import com.mongodb.client.gridfs.GridFSBucket;
-import com.pubinfo.memory.common.dto.ResponseReturn;
+import com.pubinfo.memory.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import com.pubinfo.memory.repository.UploadRepository;
@@ -20,6 +20,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -50,11 +51,10 @@ public class UploadServiceImpl implements IUploadService {
      * @Author: Administrator
      * @Date: 2020/4/28 14:37
      */
+    @Transactional(rollbackFor = Exception.class)
     @Override
-    public ResponseReturn saveFile(MultipartFile[] files) {
+    public ResponseReturn saveFile(MultipartFile[] files) throws IOException, NoSuchAlgorithmException {
         //file的校验
-        try {
-            //对文件按大小分装
             Map<String, Object> objectMap = check(files);
             //小文件集合  可以一次性插入
             List<FileModel> bsons = (List<FileModel>) objectMap.get("bsons");
@@ -66,20 +66,12 @@ public class UploadServiceImpl implements IUploadService {
 
             //大文件管理文档
             List<FileDocument> list = saveByGridFS(gridfs);
-            //文件插入完毕
-            //拿到插入文件的详细信息：
-            // 小文件：文件名  文件类型 文件后缀名 文件大小 文件id（拿到comment信息）
-            //大文件：文件名 文件类型 文件后缀名 文件大小 文件管理文档的_id:(拿到fileDocument信息)
-            //fileDocument:gridfsId-->fs.files:filename-->fs.files:_id-->fs.chunks:files_id
+
             objectMap.put("bsons",bsons);
             objectMap.put("gridfs",list);
 
             return ResponseReturn.addSuccess(objectMap);
-        } catch (IOException | NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
 
-        return ResponseReturn.unknownError();
     }
 
     /**
@@ -89,12 +81,11 @@ public class UploadServiceImpl implements IUploadService {
      * @Author: Administrator
      * @Date: 2020/4/29 16:52
      */
-    public List<FileDocument> saveByGridFS(List<MultipartFile> files) {
+    public List<FileDocument> saveByGridFS(List<MultipartFile> files) throws IOException, NoSuchAlgorithmException {
         int size = files.size();
         List<FileDocument> list = new ArrayList<>();
         InputStream in = null;
         for (int i = 0; i < size; i++) {
-            try {
                 in = files.get(i).getInputStream();
                 FileDocument fileDocument = new FileDocument();
                 fileDocument.setSuffix("test");
@@ -104,9 +95,6 @@ public class UploadServiceImpl implements IUploadService {
                 FileDocument fileDocument1 = saveFile(files.get(i), gridfsId);
 
                 list.add(fileDocument1);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         return list;
     }
@@ -178,6 +166,19 @@ public class UploadServiceImpl implements IUploadService {
         return null;
     }
 
+    /**
+     * 功能描述: 分页显示所有文件
+     * @Param: []
+     * @Return: com.pubinfo.memory.dto.ResponseReturn
+     * @Author: Administrator
+     * @Date: 2020/4/29 17:08
+     */
+    @Override
+    public ResponseReturn list() {
+        List<FileModel> all = uploadRepository.findAll();
+        return ResponseReturn.addSuccess(all);
+    }
+
     public Map<String, Object> check(MultipartFile[] files) throws IOException, NoSuchAlgorithmException {
 
 
@@ -205,7 +206,7 @@ public class UploadServiceImpl implements IUploadService {
                 fileModel.setContent(content);
                 fileModel.setContentType(contentType);
                 fileModel.setSuffix(suffix);
-                fileModel.setSize(length);
+                fileModel.setSize(size);
                 fileModel.setUploadDate(new Date());
                 fileModel.setMd5(MD5Util.getMD5(files[k].getInputStream()));
 
@@ -218,26 +219,5 @@ public class UploadServiceImpl implements IUploadService {
         map.put("gridfs", gridfs);
 
         return map;
-    }
-
-    /**
-     * 功能描述: 查出所有文件信息
-     * @Param: []
-     * @Return: com.pubinfo.memory.dto.ResponseReturn
-     * @Author: Administrator
-     * @Date: 2020/5/11 2:29
-     */
-    @Override
-    public ResponseReturn filesList(){
-        //拿到小文件信息
-        List<FileModel> fileModels = mongoTemplate.findAll(FileModel.class);
-        //拿到大文件信息
-        List<FileDocument> fileDocuments = mongoTemplate.findAll(FileDocument.class);
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("fileModels",fileModels);
-        map.put("fileDocuments",fileDocuments);
-
-        return ResponseReturn.addSuccess(map);
     }
 }

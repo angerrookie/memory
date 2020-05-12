@@ -7,7 +7,9 @@ import com.pubinfo.memory.entity.FileModel;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public interface IUploadService {
@@ -19,7 +21,7 @@ public interface IUploadService {
      * @Author: Administrator
      * @Date: 2020/4/29 8:22
      */
-    ResponseReturn saveFile(MultipartFile[] file);
+    ResponseReturn saveFile(MultipartFile[] file) throws IOException, NoSuchAlgorithmException;
 
     String uploadFileToGridFS(InputStream in , String contentType);
 
