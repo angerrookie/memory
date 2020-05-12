@@ -3,7 +3,7 @@ package com.pubinfo.memory.service.Impl;
 
 import cn.hutool.core.util.IdUtil;
 import com.mongodb.client.gridfs.GridFSBucket;
-import com.pubinfo.memory.dto.ResponseReturn;
+import com.pubinfo.memory.common.dto.ResponseReturn;
 import com.pubinfo.memory.entity.FileDocument;
 import com.pubinfo.memory.entity.FileModel;
 import com.pubinfo.memory.repository.UploadRepository;
@@ -174,7 +174,7 @@ public class UploadServiceImpl implements IUploadService {
      * @Date: 2020/4/29 17:08
      */
     @Override
-    public ResponseReturn list() {
+    public ResponseReturn filesList() {
         List<FileModel> all = uploadRepository.findAll();
         return ResponseReturn.addSuccess(all);
     }
